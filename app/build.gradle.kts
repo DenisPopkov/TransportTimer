@@ -112,6 +112,11 @@ dependencies {
     implementation(NetworkLibs.KTOR_JSON)
     implementation(NetworkLibs.KTOR_LOGGING)
 
+    implementation(AndroidLibs.ROOM_RUNTIME)
+    implementation(AndroidLibs.ROOM_KTX)
+    annotationProcessor(AndroidLibs.ROOM_COMPILER)
+    kapt(AndroidLibs.ROOM_COMPILER)
+
     testImplementation(TestLibs.JUNIT)
     androidTestImplementation(AndroidXTestLibs.JUNIT)
     androidTestImplementation(ComposeLibs.UI_TEST)

@@ -16,6 +16,7 @@ object Versions {
     const val LIVEDATA = "1.4.0-beta01"
     const val AGP = "7.4.2"
     const val KTOR = "2.2.4"
+    const val ROOM = "2.5.0"
 }
 
 object Sdk {
@@ -84,6 +85,9 @@ object AndroidLibs {
         "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.COROUTINES}"
     const val COROUTINES = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.COROUTINES}"
     const val LIVEDATA = "androidx.compose.runtime:runtime-livedata:${Versions.LIVEDATA}"
+    const val ROOM_RUNTIME = "androidx.room:room-runtime:${Versions.ROOM}"
+    const val ROOM_KTX = "androidx.room:room-ktx:${Versions.ROOM}"
+    const val ROOM_COMPILER = "androidx.room:room-compiler:${Versions.ROOM}"
 }
 
 object NetworkLibs {
