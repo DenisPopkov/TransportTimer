@@ -15,6 +15,7 @@ object Versions {
     const val COROUTINES = "1.6.4"
     const val LIVEDATA = "1.4.0-beta01"
     const val AGP = "7.4.2"
+    const val KTOR = "2.2.4"
 }
 
 object Sdk {
@@ -45,10 +46,14 @@ object Acompanist {
     const val SYSTEM_UI_CONTROLLER_ACCOMPANIST =
         "com.google.accompanist:accompanist-systemuicontroller:${Versions.ACCOMPANIST}"
     const val PAGER_ACCOMPANIST = "com.google.accompanist:accompanist-pager:${Versions.ACCOMPANIST}"
-    const val PAGER_INDICATOR_ACCOMPANIST = "com.google.accompanist:accompanist-pager-indicators:${Versions.ACCOMPANIST}"
-    const val SWIPE_REFRESHER_ACCOMPANIST = "com.google.accompanist:accompanist-swiperefresh:${Versions.ACCOMPANIST}"
-    const val PLACEHOLDER_ACCOMPANIST = "com.google.accompanist:accompanist-placeholder-material:${Versions.ACCOMPANIST}"
-    const val INSETS_ACCOMPANIST = "com.google.accompanist:accompanist-insets:${Versions.ACCOMPANIST}"
+    const val PAGER_INDICATOR_ACCOMPANIST =
+        "com.google.accompanist:accompanist-pager-indicators:${Versions.ACCOMPANIST}"
+    const val SWIPE_REFRESHER_ACCOMPANIST =
+        "com.google.accompanist:accompanist-swiperefresh:${Versions.ACCOMPANIST}"
+    const val PLACEHOLDER_ACCOMPANIST =
+        "com.google.accompanist:accompanist-placeholder-material:${Versions.ACCOMPANIST}"
+    const val INSETS_ACCOMPANIST =
+        "com.google.accompanist:accompanist-insets:${Versions.ACCOMPANIST}"
 }
 
 object HiltLibs {
@@ -75,7 +80,17 @@ object AndroidLibs {
     const val SERIALIZATION =
         "org.jetbrains.kotlinx:kotlinx-serialization-json:${Versions.SERIALIZATION}"
     const val DATASTORE = "androidx.datastore:datastore-preferences:${Versions.DATASTORE}"
-    const val COROUTINES_CORE = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.COROUTINES}"
+    const val COROUTINES_CORE =
+        "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.COROUTINES}"
     const val COROUTINES = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.COROUTINES}"
     const val LIVEDATA = "androidx.compose.runtime:runtime-livedata:${Versions.LIVEDATA}"
+}
+
+object NetworkLibs {
+    const val KTOR_CORE = "io.ktor:ktor-client-core-jvm:${Versions.KTOR}"
+    const val KTOR_SERIALIZATION = "io.ktor:ktor-client-serialization-jvm:${Versions.KTOR}"
+    const val KTOR_NEGOTIATION = "io.ktor:ktor-client-content-negotiation:${Versions.KTOR}"
+    const val KTOR_JSON = "io.ktor:ktor-serialization-kotlinx-json:${Versions.KTOR}"
+    const val KTOR_ANDROID = "io.ktor:ktor-client-android-jvm:${Versions.KTOR}"
+    const val KTOR_LOGGING = "io.ktor:ktor-client-logging-jvm:${Versions.KTOR}"
 }

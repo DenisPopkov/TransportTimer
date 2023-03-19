@@ -9,7 +9,7 @@ plugins {
 
 android {
 
-    namespace = "com.compose.template"
+    namespace = "ru.popkov.transport.timer"
     compileSdk = Sdk.COMPILE_SDK_VERSION
     defaultConfig {
         applicationId = AppConfiguration.APPLICATION_ID
@@ -103,6 +103,13 @@ dependencies {
     implementation(UILibs.COIL)
     implementation(HiltLibs.ANDROID)
     kapt(HiltLibs.ANDROID_COMPILER)
+
+    implementation(NetworkLibs.KTOR_CORE)
+    implementation(NetworkLibs.KTOR_ANDROID)
+    implementation(NetworkLibs.KTOR_SERIALIZATION)
+    implementation(NetworkLibs.KTOR_NEGOTIATION)
+    implementation(NetworkLibs.KTOR_JSON)
+    implementation(NetworkLibs.KTOR_LOGGING)
 
     testImplementation(TestLibs.JUNIT)
     androidTestImplementation(AndroidXTestLibs.JUNIT)

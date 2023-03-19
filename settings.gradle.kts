@@ -7,5 +7,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "JetpackComposeTemplate"
+rootProject.name = "TransportTimer"
 include(":app")
