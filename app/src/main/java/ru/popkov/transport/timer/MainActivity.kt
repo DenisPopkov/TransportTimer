@@ -25,14 +25,16 @@ import androidx.compose.ui.unit.dp
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.WindowCompat
 import androidx.datastore.preferences.preferencesDataStore
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.rememberNavController
+import dagger.hilt.android.AndroidEntryPoint
 import ru.popkov.transport.timer.datastore.ThemeViewModel
 import ru.popkov.transport.timer.navigation.NavGraph
 import ru.popkov.transport.timer.ui.components.BottomNavScreen
 import ru.popkov.transport.timer.ui.components.FloatingButton
 import ru.popkov.transport.timer.ui.theme.apptheme.AppTheme
+import ru.popkov.transport.timer.ui.viewmodel.MainViewModel
 import ru.popkov.transport.timer.utills.plus
-import dagger.hilt.android.AndroidEntryPoint
 
 val Context.dataStore by preferencesDataStore("settings")
 
@@ -52,7 +54,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun MainScreen() {
+fun MainScreen(mainViewModel: MainViewModel = viewModel()) {
 
     AppTheme {
 
@@ -84,7 +86,9 @@ fun MainScreen() {
         ) {
             Scaffold(
                 bottomBar = { BottomNavScreen(navController) },
-                floatingActionButton = { FloatingButton {} },
+                floatingActionButton = { FloatingButton {
+                    mainViewModel.postTrip("test")
+                } },
                 floatingActionButtonPosition = FabPosition.Center,
             ) { paddingValues ->
                 Column(
